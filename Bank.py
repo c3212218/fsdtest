@@ -7,7 +7,7 @@ class Bank:
         while True:
             
 
-            if choice == 'x':
+            if choice == 'y':
                 break
 
             if choice == 'd':
