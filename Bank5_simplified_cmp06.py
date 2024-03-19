@@ -41,6 +41,5 @@ class Bank:
 
 
 if __name__ == "__main__":
-    bank1 = Bank()
-    bank1.main()
-    bank2 = Bank()
+    bank = Bank()
+    bank.main()
