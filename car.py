@@ -4,4 +4,4 @@ class Car:
         self.model = model
 
     def get_info(self):
-        return f"{self.make} {self.model}"
+        return f"Make: {self.make} Model: {self.model}"
