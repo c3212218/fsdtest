@@ -104,6 +104,19 @@ class Bank:
                 print(f"{account.type} account balance: ${account.balance:.2f}")
 
     def main(self):
+        
+    # Initialize customers
+        num_customers = int(input("Enter the number of customers: "))
+        for i in range(num_customers):
+            name = input(f"Enter customer {i+1} name: ")
+            savings_balance = float(input(f"Enter savings account balance for {name}: "))
+            loan_balance = float(input(f"Enter loan account balance for {name}: "))
+
+            customer = Customer(name)
+            customer.accounts[0].balance = savings_balance
+            customer.accounts[1].balance = loan_balance
+            bank.add_customer(customer)
+            
         while True:
             print(f"\nCustomer Menu: (Current date and time: {now})")
             print("(L) Login")
@@ -154,18 +167,4 @@ class Bank:
 
 if __name__ == "__main__":
     bank = Bank()
-
-    # Initialize customers
-    num_customers = int(input("Enter the number of customers: "))
-    for i in range(num_customers):
-        name = input(f"Enter customer {i+1} name: ")
-        savings_balance = float(input(f"Enter savings account balance for {name}: "))
-        loan_balance = float(input(f"Enter loan account balance for {name}: "))
-
-        customer = Customer(name)
-        customer.accounts[0].balance = savings_balance
-        customer.accounts[1].balance = loan_balance
-
-        bank.add_customer(customer)
-
     bank.main()
